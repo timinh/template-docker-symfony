@@ -1,0 +1,13 @@
+version: '3.7'
+services: 
+  app:
+    build: 
+      context: ./.docker/php
+      dockerfile: Dockerfile
+    container_name: app
+    volumes: 
+      - ./.docker/conf/app.conf:/etc/apache2/sites-available/000-default.conf
+      - ./app:/var/www/html:rw
+    ports: 
+      - "80:80"
+  
