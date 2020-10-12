@@ -10,4 +10,14 @@ services:
       - ./app:/var/www/html:rw
     ports: 
       - "80:80"
-  
+  front:
+    image: 'node:alpine'
+    working_dir: /home/node/app
+    command:
+      - /bin/sh
+      - '-c'
+      - 'npm install && npm run watch'
+    volumes:
+      - ./app:/home/node/app:rw
+    ports:
+        - '3000:3000'
