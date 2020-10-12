@@ -25,6 +25,7 @@ services:
   front:
     image: 'node:alpine'
     working_dir: /home/node/app
+    container_name: front
     command:
       - /bin/sh
       - '-c'

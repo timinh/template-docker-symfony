@@ -1,4 +1,6 @@
 CONTAINER_NAME := app
+CONTAINER_FRONT := front
+
 .PHONY: help start stop ps bash
 
 help: ## Affiche cette aide
@@ -15,3 +17,6 @@ ps: ## Affiche les containers docker
 
 bash: ## Accès à la ligne de commandes sur le conteneur du site
 	@docker exec -it $(CONTAINER_NAME) bash
+
+bash-front: ## Accès à la ligne de commandes sur le conteneur front
+	@docker exec -it $(CONTAINER_FRONT) /bin/sh
