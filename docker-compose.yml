@@ -10,6 +10,8 @@ services:
       - ./app:/var/www/html:rw
     ports: 
       - "80:80"
+    depends_on: 
+      - rabbitmq
   db:
     image: mariadb:10.5.6
     container_name: db
