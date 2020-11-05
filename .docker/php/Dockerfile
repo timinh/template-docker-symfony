@@ -11,5 +11,6 @@ RUN pecl install amqp
 RUN docker-php-ext-enable intl amqp
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 RUN a2enmod rewrite
+RUN usermod -u 1000 www-data
 WORKDIR /var/www/html
 EXPOSE 80
