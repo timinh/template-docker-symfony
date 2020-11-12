@@ -26,13 +26,13 @@ services:
     ports:
       - "3306:3306"
   front:
-    image: 'node:alpine'
+    image: 'node:14.15.0-alpine3.12'
     working_dir: /home/node/app
     container_name: front
     command:
       - /bin/sh
       - '-c'
-      - 'yarn && yarn watch'
+      - 'npm install && npm run dev'
     volumes:
       - ./app:/home/node/app:rw
     ports:
