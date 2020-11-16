@@ -4,6 +4,8 @@ services:
     build: 
       context: ./.docker/php
       dockerfile: Dockerfile
+    environment: 
+      TZ: Europe/Paris
     container_name: app
     volumes: 
       - ./.docker/conf/app.conf:/etc/apache2/sites-available/000-default.conf
