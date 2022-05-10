@@ -23,7 +23,7 @@ Contient :
  Pour démarrer un projet symfony : 
  
  ~~~
- git clone git clone https://github.com/timinh/template-docker-symfony.git nom_du_projet
+ git clone https://github.com/timinh/template-docker-symfony.git nom_du_projet
  ~~~
  
  Ensuite 2 solutions : 
